@@ -12,7 +12,10 @@
 *,
 *::before,
 *::after {
+  font-size: clamp;
   box-sizing: border-box;
+  font-family: "QuickSand", system-ui, -apple-system, "Open Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 * {
@@ -60,17 +63,11 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-
-  font-family: "QuickSand", system-ui, -apple-system, "Open Sans",
-    "Helvetica Neue", sans-serif;
 }
 
 #root,
 #__next {
   isolation: isolate;
-}
-
-main {
 }
 
 .container {
@@ -86,7 +83,7 @@ main {
 .banner {
   padding: 10% 0;
 
-  flex: 2 2 220px;
+  flex: 5 1 220px;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/assets/images/Gym-banner.jpg");
@@ -113,7 +110,23 @@ main {
 
   font-size: clamp(1.2rem, 2vw, 3rem);
 
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
+    rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
+    rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
+    rgba(255, 255, 255, 0.09) 0px 8px 4px,
+    rgba(255, 255, 255, 0.09) 0px 16px 8px,
+    rgba(255, 255, 255, 0.09) 0px 32px 16px; */
+
+  box-shadow: rgba(0, 0, 0, 0.17) 0px 23px 25px 0px inset,
+    rgba(255, 255, 255, 0.15) 0px 36px 30px 0px inset,
+    rgba(255, 255, 255, 0.1) 0px 79px 40px 0px inset,
+    rgba(255, 255, 255, 0.06) 0px -2px 1px,
+    rgba(255, 255, 255, 0.09) 0px -4px 2px,
+    rgba(255, 255, 255, 0.09) 0px -8px 4px,
+    rgba(255, 255, 255, 0.09) 0px -16px 8px,
+    rgba(255, 255, 255, 0.09) 0px -32px 16px,
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
     rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
     rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
@@ -130,35 +143,33 @@ main {
   width: 200px;
 }
 
-.form-input {
-  flex: 3 3 420px;
-  padding: 20% 20%;
+.signup-form {
+  flex: 6 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 0 100px;
 
   font-size: calc(12px + 0.1rem);
 }
 
-@media screen and (min-width: 480px) {
-  .form-input {
-    padding: 1.5rem;
+@media screen and (max-width: 1080px) {
+  .signup-form {
+    padding: 40px 20px 20px;
   }
 }
 
-/* From Uiverse.io by shadowmurphy */
-.input {
-  border: 2px solid transparent;
-  width: 15em;
-  height: 2.5em;
-  padding-left: 0.8em;
-  outline: none;
-  overflow: hidden;
-  background-color: #f3f3f3;
-  border-radius: 10px;
-  transition: all 0.5s;
+.form-area {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.input:hover,
-.input:focus {
-  border: 2px solid #4a9dec;
-  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
-  background-color: white;
+.form-action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

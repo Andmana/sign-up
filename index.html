@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style-reff.css" />
     <script src="assets/js/script.js" defer></script>
   </head>
   <body>
@@ -18,35 +19,74 @@
           </div>
           <!-- <img src="/assets/images/Gym-banner.jpg" alt="" /> -->
         </div>
-        <div class="form-input">
-          <form>
-            <div>
-              <label for="fname">FIRST NAME</label>
-              <input type="text" name="fname" id="fname" />
-
-              <label for="fname">LAST NAME</label>
-              <input type="text" name="lname" id="lname" />
+        <div class="signup-form">
+          <h1>Get Fit, Get Strong, Get Started!</h1>
+          <form class="form-area">
+            <div class="form-input">
+              <input
+                class="input"
+                type="text"
+                name="fname"
+                id="fname"
+                placeholder="First Name"
+              />
+              <label class="label" for="fname">FIRST NAME :</label>
             </div>
-            <div>
-              <label for="email">EMAIL</label>
-              <input type="email" name="email" id="email" />
-
-              <label for="email">PHONE NUMBER</label>
-              <input type="phone" name="phone" id="phone" />
+            <div class="form-input">
+              <input
+                class="input"
+                type="text"
+                name="lname"
+                id="lname"
+                placeholder=""
+              />
+              <label class="label" for="fname">LAST NAME :</label>
             </div>
-            <div>
-              <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" />
-
-              <label for="password">CONFIRM PASSWORD</label>
-              <input type="repassword" name="repassword" id="repassword" />
+            <div class="form-input">
+              <input
+                class="input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder=""
+              />
+              <label class="label" for="email">EMAIL :</label>
             </div>
-
-            <div>
-              <button type="submit" id="submit">Sign Up</button>
-              Already have an account<a href="">Log in</a>
+            <div class="form-input">
+              <input
+                class="input"
+                type="phone"
+                name="phone"
+                id="phone"
+                placeholder=""
+              />
+              <label class="label" for="email">PHONE NUMBER :</label>
+            </div>
+            <div class="form-input">
+              <input
+                class="input"
+                type="password"
+                name="password"
+                id="password"
+                placeholder=""
+              />
+              <label class="label" for="password">PASSWORD :</label>
+            </div>
+            <div class="form-input">
+              <input
+                class="input"
+                type="repassword"
+                name="repassword"
+                id="repassword"
+                placeholder=""
+              />
+              <label class="label" for="password">CONFIRM PASSWORD :</label>
             </div>
           </form>
+          <div class="form-action">
+            <button class="button-30" role="button">Sign Up</button>
+            <h3>Already have an account <a href="">Log in</a></h3>
+          </div>
         </div>
       </div>
     </main>
