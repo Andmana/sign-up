@@ -1,8 +1,17 @@
 @font-face {
-  font-family: "QuickSand";
-  src: url("/assets/fonts/Quicksand-VariableFont_wght.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "QuickSand";
+    src: url("/assets/fonts/Quicksand-VariableFont_wght.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --background-color-dark: #121212;
+    --text-color-dark: #ffffff;
+    --current: white;
+    --current-text: black;
 }
 
 /*
@@ -12,19 +21,28 @@
 *,
 *::before,
 *::after {
-  font-size: clamp;
-  box-sizing: border-box;
-  font-family: "QuickSand", system-ui, -apple-system, "Open Sans",
-    "Helvetica Neue", sans-serif;
+    font-size: clamp;
+    box-sizing: border-box;
+    font-family: "QuickSand", system-ui, -apple-system, "Open Sans",
+        "Helvetica Neue", sans-serif;
 }
 
 * {
-  margin: 0;
+    margin: 0;
 }
 
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    /* background-color: #000000; */
+}
+
+.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
 
 img,
@@ -32,15 +50,15 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 p,
@@ -50,11 +68,12 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+    overflow-wrap: break-word;
+    color: inherit;
 }
 
 p {
-  text-wrap: pretty;
+    text-wrap: pretty;
 }
 h1,
 h2,
@@ -62,55 +81,56 @@ h3,
 h4,
 h5,
 h6 {
-  text-wrap: balance;
+    text-wrap: balance;
 }
 
 #root,
 #__next {
-  isolation: isolate;
+    isolation: isolate;
+    font-size: clamp(28px, 4vw, 48px);
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container > div {
-  height: 100vh;
+    height: 100vh;
 }
 
 .banner {
-  padding: 10% 0;
+    /* padding: 10% 0; */
 
-  flex: 5 1 220px;
+    flex: 5 1 220px;
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/images/Gym-banner.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/assets/images/Gym-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-  color: white;
+    color: white;
 
-  text-align: center;
+    text-align: center;
 }
 
 .hero {
-  padding: 30px 100px;
-  min-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    padding: 30px 100px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  font-size: clamp(1.2rem, 2vw, 3rem);
+    font-size: clamp(1rem, 2vw, 2rem);
 
-  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
     rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
     rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
@@ -118,58 +138,82 @@ h6 {
     rgba(255, 255, 255, 0.09) 0px 16px 8px,
     rgba(255, 255, 255, 0.09) 0px 32px 16px; */
 
-  box-shadow: rgba(0, 0, 0, 0.17) 0px 23px 25px 0px inset,
-    rgba(255, 255, 255, 0.15) 0px 36px 30px 0px inset,
-    rgba(255, 255, 255, 0.1) 0px 79px 40px 0px inset,
-    rgba(255, 255, 255, 0.06) 0px -2px 1px,
-    rgba(255, 255, 255, 0.09) 0px -4px 2px,
-    rgba(255, 255, 255, 0.09) 0px -8px 4px,
-    rgba(255, 255, 255, 0.09) 0px -16px 8px,
-    rgba(255, 255, 255, 0.09) 0px -32px 16px,
-    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
-    rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
-    rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
-    rgba(255, 255, 255, 0.09) 0px 8px 4px,
-    rgba(255, 255, 255, 0.09) 0px 16px 8px,
-    rgba(255, 255, 255, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px 23px 25px 0px inset,
+        rgba(255, 255, 255, 0.15) 0px 36px 30px 0px inset,
+        rgba(255, 255, 255, 0.1) 0px 79px 40px 0px inset,
+        rgba(255, 255, 255, 0.06) 0px -2px 1px,
+        rgba(255, 255, 255, 0.09) 0px -4px 2px,
+        rgba(255, 255, 255, 0.09) 0px -8px 4px,
+        rgba(255, 255, 255, 0.09) 0px -16px 8px,
+        rgba(255, 255, 255, 0.09) 0px -32px 16px,
+        rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
+        rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
+        rgba(255, 255, 255, 0.06) 0px 2px 1px,
+        rgba(255, 255, 255, 0.09) 0px 4px 2px,
+        rgba(255, 255, 255, 0.09) 0px 8px 4px,
+        rgba(255, 255, 255, 0.09) 0px 16px 8px,
+        rgba(255, 255, 255, 0.09) 0px 32px 16px;
 }
 
 .hero > h1 {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 #logo {
-  width: 200px;
+    width: 200px;
 }
 
 .signup-form {
-  flex: 6 1 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
+    flex: 6 1 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
 
-  padding: 0 100px;
+    padding: 20px max(min(100px, calc((90% - 1024px) / 2)), 20px);
 
-  font-size: calc(12px + 0.1rem);
-}
-
-@media screen and (max-width: 1080px) {
-  .signup-form {
-    padding: 40px 20px 20px;
-  }
+    font-size: calc(12px + 0.1rem);
 }
 
 .form-area {
-  display: flex;
-  justify-content: start;
-  gap: 30px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1080px) {
+    .signup-form {
+        /* padding: 40px 20px 20px; */
+    }
+    .form-area {
+        gap: 10px;
+    }
+}
 .form-action {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.error {
+    color: red;
+    position: absolute;
+    top: 90%;
+    right: 10%;
+}
+
+/* Reset autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--current) inset !important;
+    -webkit-text-fill-color: var(--current-text);
+}
+
+/* Optional: Add styles to input fields when autofilled */
+input:focus {
+    outline: none; /* Optional: remove default focus outline */
 }
